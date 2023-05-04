@@ -1,0 +1,41 @@
+# Training config
+num_jobs: 8
+
+# Adaptation
+batch_size: 8
+train_crop_length: 500
+valid_crop_length: 500
+
+min_spk_num: 2
+max_spk_num: 7
+
+# Optimizer param
+optim_type: Adam
+learning_rate: 0.1
+max_grad_norm: 5
+
+# LR scheduler 
+lr_scheduler: noam
+lr_param:
+    warmup_steps: 25000
+
+# Model config
+model_type: MTEAD.model.multi-target_extractor_and_detector
+
+pre_net:
+    num_input: 40
+    num_hidden: 128
+
+spk_net:
+    num_input: 256
+    num_hidden: 128
+    num_layer: 2
+    bidirectional: true
+    dropout: 0.1
+
+TSCont:
+    num_input: 128
+    num_hidden: 128
+    module_path1: [blstm, blstm, blstm]
+    module_path2: [blstm, blstm, blstm]
+    dropout: 0.1
