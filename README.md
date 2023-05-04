@@ -12,9 +12,13 @@ The model is the neural stage of MTEAD, stored in ``model/``
 * Diarization (VAD) Result. Size: (Batch, Spk, Time)
 ### Model Structure
 #### Main 
-![](https://i.imgur.com/683uyaA.png)
+
+<img src="https://i.imgur.com/683uyaA.png" width="500" height="500">
+
 #### Time-speaker Contextualizer
-![](https://i.imgur.com/YAb1Mma.png)
+
+<img src="https://i.imgur.com/YAb1Mma.png" width="450" height="300">
+
 ### Dimension of each layer
 
 ```bash
