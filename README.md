@@ -5,11 +5,11 @@ A model for Unknown-number Speaker Diarization
 ## Model
 The model is the neural stage of MTEAD, stored in ``model/``
 #### Inputs
-* X: Features, i.e. MFCC. Size(Batch, Dim, Time)
-* E: Speaker Features, i.e. 500 frames of speaker. Size(Batch, Time , E_Dim, Spk)
-* num_spks: Numbers of speaker, for training. Size(Batch)
+* X: Features, i.e. MFCC. Size: (Batch, Dim, Time)
+* E: Speaker Features, i.e. 500 frames of speaker. Size: (Batch, Time , E_Dim, Spk)
+* num_spks: Numbers of speaker, for training. Size: (Batch)
 #### Output
-* Diarization (VAD) Result. Size(Batch, Spk, Time)
+* Diarization (VAD) Result. Size: (Batch, Spk, Time)
 #### Model Structure
 
 ```bash
@@ -63,7 +63,7 @@ Model                                                   [32, 4, 500]            
 ├─RNN: 1-5                                              [128, 128, 500]           --
 │    └─LSTM: 2-4                                        [128, 500, 128]           264,192
 │    └─Linear: 2-5                                      [128, 500, 128]           16,512
-├─DualPathVAD: 1-6                                      [32, 4, 500]              --
+├─TimeSpeakerContextualizer: 1-6                        [32, 4, 500]              --
 │    └─Sequential: 2-6                                  [32, 128, 4, 500]         --
 │    │    └─GroupNorm: 3-37                             [32, 128, 4, 500]         256
 │    │    └─Conv2d: 3-38                                [32, 128, 4, 500]         16,512
