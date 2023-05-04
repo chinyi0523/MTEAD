@@ -203,7 +203,7 @@ class Model(nn.Module):
             E: Speaker Features, i.e. 500 frames of speaker, Size(Batch, Time , E_Dim, Spk)
             num_spks: Numbers of speaker, for training, Size(Batch)
         Output:
-            Y: VAD result, Size(Batch, Spk, Time)
+            VAD result, Size(Batch, Spk, Time)
         '''
         E_batch, _, E_Dim, E_spk = E.shape
         E = E.permute(0, 3, 1, 2).flatten(0, 1)  # 32,500,40
