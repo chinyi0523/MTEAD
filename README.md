@@ -1,6 +1,6 @@
 # Multi-target Extractor and Detector
 
-A model for Unknown-number Speaker Diarization
+The model for proposed in [Multi-Target Extractor and Detector for Unknown-Number Speaker Diarization](https://ieeexplore.ieee.org/document/10132569).
 
 ## Model
 The model is the neural stage of MTEAD, stored in ``model/``
