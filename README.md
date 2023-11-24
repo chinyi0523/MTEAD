@@ -121,4 +121,18 @@ Estimated Total Size (MB): 15219.67
 ## Requirements
  - python >= 3.6
    - pytorch >= 1.3
+  
+## Citation
+```
+@ARTICLE{10132569,
+  author={Cheng, Chin-Yi and Lee, Hung-Shin and Tsao, Yu and Wang, Hsin-Min},
+  journal={IEEE Signal Processing Letters}, 
+  title={Multi-Target Extractor and Detector for Unknown-Number Speaker Diarization}, 
+  year={2023},
+  volume={30},
+  number={},
+  pages={638-642},
+  doi={10.1109/LSP.2023.3279781}
+}
+```
 
